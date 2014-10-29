@@ -1,6 +1,7 @@
 <?php
 /**
  * ExpressionEngine - by EllisLab
+ * STAMP IDEAS
  *
  * @package		ExpressionEngine
  * @author		EllisLab Dev Team
