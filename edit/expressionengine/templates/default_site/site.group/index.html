@@ -7,15 +7,13 @@
   <div class="slider">
     <div class="container">
       <ul class="bxslider">
-        <li>
-          <img src="images/uploads/slide-1.jpg" alt="" />
-        </li>
-        <li>
-          <img src="images/uploads/slide-1.jpg" alt="" />
-        </li>
-        <li>
-          <img src="images/uploads/slide-1.jpg" alt="" />
-        </li>
+      	{exp:channel:entries entry_id="485" disable="categories|category_fields|member_data|pagination"}
+      		{homepage_slider}
+	      		<li>{if slide_link}<a href="{slide_link}">{/if}
+	      			<img src="{slide_image}" alt="High Quality English and French Antiques | Pickwick Antiques" />
+	      			{if slide_link}</a>{/if}</li>
+      		{/homepage_slider}
+      	{/exp:channel:entries}
     </ul><!-- Bx Slider -->
     </div><!-- Container -->
   </div><!-- Slider -->
