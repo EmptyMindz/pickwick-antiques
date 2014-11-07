@@ -1,0 +1,14 @@
+{if segment_3 == "category"}<!--list category products-->
+<ul>{exp:channel:entries channel="inventory" orderby="date" sort="desc" disable="categories|category_fields|member_data|pagination"}
+	<li>{title}
+	{inventory_period}
+	{inventory_images limit="1"}
+	{image}
+	{/inventory_images}</li>
+{/exp:channel:entries}</ul>
+{if:else}<!--list categories-->
+<ul>{exp:channel:categories category_group="1" channel="inventory"}
+    <a href="{path='shop/listing'}">{category_name}</a> - 
+    {category_image}<br>
+{/exp:channel:categories}</ul>
+{/if}
