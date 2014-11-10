@@ -1,0 +1,16 @@
+{if segment_3 == "category"}<!--list category products-->
+<ul>{exp:channel:entries channel="inventory" orderby="date" sort="desc" disable="categories|category_fields|member_data|pagination"}
+	<li>
+	<a href="{page_url}">{title}</a>
+	{inventory_period}
+	<div style="width:208px;height:180px;overflow:hidden;background:red;text-align:center;">
+	{inventory_images limit="1"}
+	<img src="{image}" alt="{title}" title="{title}" style="width:auto;height:auto;max-height:100%;margin:0 auto;">
+	{/inventory_images}
+	</div>
+	</li>
+{/exp:channel:entries}</ul>
+
+{if:else}<!--list categories {cat-id-list}-->
+{embed="inventory/category-ids" cat-id-list="{cat-id-list}"}
+{/if}

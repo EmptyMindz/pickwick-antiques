@@ -9,9 +9,11 @@
       <ul class="bxslider">
       	{exp:channel:entries entry_id="485" disable="categories|category_fields|member_data|pagination"}
       		{homepage_slider}
-	      		<li>{if slide_link}<a href="{slide_link}">{/if}
+	      		<li>
+	      			{if slide_link}<a href="{slide_link}">{/if}
 	      			<img src="{slide_image}" alt="High Quality English and French Antiques | Pickwick Antiques" />
-	      			{if slide_link}</a>{/if}</li>
+	      			{if slide_link}</a>{/if}
+	      		</li>
       		{/homepage_slider}
       	{/exp:channel:entries}
     </ul><!-- Bx Slider -->
@@ -22,9 +24,11 @@
     <div class="container">
       <div class="content">
         <h2 class="curateYourHome">Curate Your Home</h2>
-        <p>Pickwick is a leading source for fine English and French antiques. With over 10,000 square feet of beautiful objects in our inventory and a seasoned staff boasting design degrees, Pickwick Antiques offers a high quality and inspirational shopping experience.</p>
+        {exp:channel:entries entry_id="485" disable="categories|category_fields|member_data|pagination"}
+        	{general_left_column}
+        {/exp:channel:entries}
         <div class="testimonials smallHeight">
-          <p>I searched at least a dozen “antique” shops in New Orleans before finding a store with a wide variety of authentic English and French antiques.<span class="person">Loree H.</span></p>
+          {embed="_includes/.testimonials"}
         </div><!-- Testimonials -->
       </div><!-- Content -->
       <aside>

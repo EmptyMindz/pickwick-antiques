@@ -1,0 +1,36 @@
+{embed="_includes/.head"}
+
+<body class="interior">
+
+  {embed="_includes/.header"}
+  
+  <div class="slider">
+    <div class="container">
+      <ul class="bxslider">
+        <li>
+          <img src="{site_url}images/uploads/slide-1.jpg" alt="" />
+        </li>
+    </ul><!-- Bx Slider -->
+    </div><!-- Container -->
+  </div><!-- Slider -->
+  
+  {exp:channel:entries channel="general_content" disable="categories|category_fields|member_data|pagination"}
+  
+  <main>
+    <div class="container">
+      <div class="content">
+        <h2 class="title">{title}</h2>
+        {general_left_column}
+      </div><!-- Content -->
+      <aside>
+        {general_right_column}
+        <div class="testimonials smallHeight">
+			{embed="_includes/.testimonials"}
+        </div><!-- Testimonials -->
+      </aside>
+    </div><!-- Container -->
+  </main>
+  
+  {/exp:channel:entries}
+  
+{embed="_includes/.footer"}

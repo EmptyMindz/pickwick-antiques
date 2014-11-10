@@ -1,0 +1,16 @@
+{exp:channel:entries channel="inventory" disable="category_fields|member_data|pagination"}
+	<a href="/">Home</a> &gt;
+	{categories}
+	{if parent_id != 0}<a href="/inventory/listing/category/{category_url_title}">{category_name}</a> &gt;{if:else}<a href="/inventory/listing/{category_url_title}/{category_id}">{category_name}</a> &gt;{/if}
+	{/categories}
+	{title}
+	<hr>
+	{title}<br>
+	{if inventory_period}{inventory_period}<br>{/if}
+	{inventory_description}<br>
+	{if inventory_dimensions}{inventory_dimensions}<br>{/if}
+	{if inventory_price}{inventory_price}<br>{/if}
+	{inventory_images}
+		<img src="{image}" alt="{title}" title="{title}"><br>
+	{/inventory_images}
+{/exp:channel:entries}
