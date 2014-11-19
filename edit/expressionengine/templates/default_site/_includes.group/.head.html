@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Talk about SEO | Pickwick Antiques</title>
+	<title>{if segment_1}{if embed:entry_meta_title}{embed:entry_meta_title}{if:else}{embed:title}{/if} | {meta-title}{if:else}{meta-title}{/if}</title>
+	{if embed:entry_keywords}<meta name="keywords" content="{embed:entry_keywords}" />{if:elseif segment_1 == ''}<meta name="keywords" content="{meta-keywords}" />{/if}
+	{if embed:entry_description}<meta name="description" content="{embed:entry_description}" />{if:elseif segment_1 == ''}<meta name="description" content="{meta-description}" />{/if}
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="description" content="This is the description for the site. Replace this with SEO text." />
 	
 	<link rel="stylesheet" href="{site_url}includes/css/style.css">
 	<link rel="stylesheet" href="{site_url}includes/css/jquery.bxslider.css">

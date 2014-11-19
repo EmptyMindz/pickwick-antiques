@@ -1,4 +1,6 @@
-{embed="_includes/.head"}
+{exp:channel:entries channel="general_content" disable="categories|category_fields|member_data|pagination"}
+
+{embed="_includes/.head" entry_title="{title}" entry_meta_title="{general_meta_title}" entry_description="{general_meta_description}" entry_keywords="{general_meta_keywords}"}
 
 <body class="interior">
 
@@ -13,9 +15,7 @@
     </ul><!-- Bx Slider -->
     </div><!-- Container -->
   </div><!-- Slider -->
-  
-  {exp:channel:entries channel="general_content" disable="categories|category_fields|member_data|pagination"}
-  
+    
   <main>
     <div class="container">
       <div class="content">
